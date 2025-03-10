@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 #define DATA_CHUNK_MAX_LENGTH (34)
 #define SOF_HEADER_OFFSET    (2)

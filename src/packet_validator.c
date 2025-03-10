@@ -41,7 +41,6 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
     //!< Check for invalid wrapper checksum
     if (!(wrapper_checksum_deci == calculated_wrapper_checksum))
     {
-        
         return INCORRECT_WRAPPER_CHECKSUM;
     }
 
@@ -54,15 +53,15 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
     uint8_t data_portion[(size - 4)];
     uint8_t multiple_chunk_data_portion[size - 4];
     uint8_t multiple_chunk_array[10][DATA_CHUNK_MAX_LENGTH];
-    uint64_t calculated_multi_chunk_checksum[16][1];
+    uint64_t calculated_multi_chunk_checksum[10][1];
 
     uint8_t last_data_chunk_chksum[3];
     uint8_t n_data_chunks = 0;
-    if (size == 4) //!< 4 bytes plus the null terminator
+    if (size == 4) //!< @note using strlen() so no need to worry about the null terminator
     {
         return ZERO_DATA;
     }
-    else if (size <= 38)
+    else if (size < 39)  //!< packet with one chunk of 3 to 34 bytes
     {
         //!< Process packet with a single chunk
         uint8_t packet_index = 0;
@@ -103,12 +102,12 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
         multiple_chunk_data_portion_length = sizeof(multiple_chunk_data_portion) / sizeof(multiple_chunk_data_portion[0]);
         n_data_chunks = multiple_chunk_data_portion_length / 34;
         uint8_t packet_index = SOF_HEADER_OFFSET;
+        int null_indicator = 255;
 
-        if(n_data_chunks >= 16) return PACKET_LARGER_THAN_16_CHUNKS;
         
         for (int i = 0; i < n_data_chunks; i++)
         {
-            for (int j = 0; j <= DATA_CHUNK_MAX_LENGTH; j++)
+            for (int j = 0; j < DATA_CHUNK_MAX_LENGTH; j++) //GO change from <= to <
             {
                 multiple_chunk_array[i][j] = packet[packet_index];
                 packet_index++;
@@ -117,7 +116,7 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
 
         //!< Check for data portion checksum in each of the 34 byte data chunks
         uint8_t chunk_checksums[n_data_chunks][3];
-        uint32_t multi_chunk_checksum_deci[n_data_chunks];
+        uint16_t multi_chunk_checksum_deci[n_data_chunks];
         
         for (int i = 0; i < n_data_chunks; i++)
         {
@@ -125,20 +124,21 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
             chunk_checksums[i][1] = multiple_chunk_array[i][DATA_CHUNK_MAX_LENGTH - 1];
             chunk_checksums[i][2] = '\0';
             multi_chunk_checksum_deci[i] = strtol(chunk_checksums[i], NULL, 16);
+
         }
 
         //!< Get the calculated checksum for all chunks to the nth one
         for (int i = 0; i < n_data_chunks; i++)
         {
-            for (int j = 0; j < (DATA_CHUNK_MAX_LENGTH - 2); j++)
+            for (int j = 0; j < (DATA_CHUNK_MAX_LENGTH - 1); j++)
             {
                 calculated_multi_chunk_checksum[i][0] += multiple_chunk_array[i][j]; //!< sum the 32 bytes e.g. from 0 to 31st index
             }
 
             calculated_multi_chunk_checksum[i][0] %= 256;
-
             if (calculated_multi_chunk_checksum[i][0] != multi_chunk_checksum_deci[i])
             {
+
                 return INCORRECT_DATA_PORTION_CHECKSUM;
             }
         }

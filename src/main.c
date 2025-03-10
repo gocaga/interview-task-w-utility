@@ -1,6 +1,6 @@
 #include "packet_validator.h"
 #include "packets.h"
-#include <string.h>
+
 
 int main()
 {
@@ -8,7 +8,8 @@ int main()
     uint16_t sizeOfPacket  = 0;
     packet_validor_ErrorType_e errorType = VALID_PACKET;
 
-     for (int i = 0; i < sizeOfPackets; i++)
+    //!< iterate through the packets array
+    for (int i = 0; i < sizeOfPackets; i++)
     {
         sizeOfPacket = strlen(packets[i]);
         
