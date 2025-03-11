@@ -6,8 +6,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DATA_CHUNK_MAX_LENGTH (34)
-#define SOF_HEADER_OFFSET    (2)
+#define DATA_CHUNK_MAX_LENGTH  (34)
+#define SOF_HEADER_OFFSET      (2)
+#define DATA_PORTION_MAX_BYTES (340)
 typedef enum
 {
     VALID_PACKET,
@@ -20,6 +21,15 @@ typedef enum
     ZERO_DATA,
     PACKET_LARGER_THAN_16_CHUNKS
 } packet_validor_ErrorType_e;
+
+typedef struct
+{
+    uint8_t type;
+    uint8_t subType;
+    uint8_t data[DATA_PORTION_MAX_BYTES];
+    uint8_t wrapperCheckSum[2];
+
+}packet_validator_AsciiPacket_t;
 
 packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size);
 

@@ -10,7 +10,21 @@
 packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size)
 {
     uint16_t calculated_wrapper_checksum = 0;
+    packet_validator_AsciiPacket_t asciiPacket;
 
+    asciiPacket.type    = packet[0];
+    asciiPacket.subType = packet[1];
+
+    asciiPacket.wrapperCheckSum[0] = packet[size - 2];
+    asciiPacket.wrapperCheckSum[1] = packet[size - 1];
+    
+    uint16_t data_index = 0;
+    for(int n = 2; n <= (size); n++)
+    {        
+        asciiPacket.data[data_index] = packet[n];
+        data_index++;
+    }
+   
     //!< Check for an incomplete packer
     if ((size) < 4) //!< Factoring the null terminator of the array
     {
@@ -99,77 +113,36 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
     else
     {
         //!< Validate a packet with multiple chunks
-        multiple_chunk_data_portion_length = sizeof(multiple_chunk_data_portion) / sizeof(multiple_chunk_data_portion[0]);
-        n_data_chunks = multiple_chunk_data_portion_length / 34;
-        uint8_t packet_index = SOF_HEADER_OFFSET;
-        int null_indicator = 255;
+        uint16_t dataLength      = strlen(asciiPacket.data);
+        uint16_t n_data_chunks   = dataLength / DATA_CHUNK_MAX_LENGTH;
+        uint8_t bytesInLastChunk = dataLength % DATA_CHUNK_MAX_LENGTH;
+        size_t checksum_summation[10][1];
+        uint16_t calcualtedChecksum_nDataChunk[10][1];
 
-        
-        for (int i = 0; i < n_data_chunks; i++)
-        {
-            for (int j = 0; j < DATA_CHUNK_MAX_LENGTH; j++) //GO change from <= to <
-            {
-                multiple_chunk_array[i][j] = packet[packet_index];
-                packet_index++;
-            }
-        }
-
-        //!< Check for data portion checksum in each of the 34 byte data chunks
         uint8_t chunk_checksums[n_data_chunks][3];
         uint16_t multi_chunk_checksum_deci[n_data_chunks];
-        
-        for (int i = 0; i < n_data_chunks; i++)
-        {
-            chunk_checksums[i][0] = multiple_chunk_array[i][DATA_CHUNK_MAX_LENGTH - 2];
-            chunk_checksums[i][1] = multiple_chunk_array[i][DATA_CHUNK_MAX_LENGTH - 1];
-            chunk_checksums[i][2] = '\0';
-            multi_chunk_checksum_deci[i] = strtol(chunk_checksums[i], NULL, 16);
 
-        }
-
-        //!< Get the calculated checksum for all chunks to the nth one
-        for (int i = 0; i < n_data_chunks; i++)
+        for (int j = 0; j < n_data_chunks; j++)
         {
-            for (int j = 0; j < (DATA_CHUNK_MAX_LENGTH - 1); j++)
+            for (int k = 0; k < (DATA_CHUNK_MAX_LENGTH - 2); k++)
             {
-                calculated_multi_chunk_checksum[i][0] += multiple_chunk_array[i][j]; //!< sum the 32 bytes e.g. from 0 to 31st index
+                checksum_summation[j][0] += asciiPacket.data[k];
             }
 
-            calculated_multi_chunk_checksum[i][0] %= 256;
-            if (calculated_multi_chunk_checksum[i][0] != multi_chunk_checksum_deci[i])
-            {
+            calcualtedChecksum_nDataChunk[j][0] = checksum_summation[j][0] % 256;
 
+            chunk_checksums[j][0] = asciiPacket.data[DATA_CHUNK_MAX_LENGTH - 2];
+            chunk_checksums[j][1] = asciiPacket.data[DATA_CHUNK_MAX_LENGTH - 1];
+            chunk_checksums[j][2] = '\0';
+            multi_chunk_checksum_deci[j] = strtol(chunk_checksums[j], NULL, 16);
+
+            if (multi_chunk_checksum_deci[j] != calcualtedChecksum_nDataChunk[j][0])
+            {
                 return INCORRECT_DATA_PORTION_CHECKSUM;
             }
         }
 
-        packet_index--; //!< cheating to cater for the increased packet_index when exiting the for-loop
-
-        //!< Capture the last chunk
-        for (int k = 0; k < (multiple_chunk_data_portion_length % 34); k++)
-        {
-            multiple_chunk_array[n_data_chunks + 1][k] = packet[packet_index];
-
-            //!< Get the calculated checksum for the last chunk
-            if (k < ((multiple_chunk_data_portion_length % 34) - 2))
-            {
-                calculated_last_multi_checksum += multiple_chunk_array[n_data_chunks + 1][k];
-            }
-            packet_index++;
-        }
-
-        //!< Check for data in the last data chunk
-        last_data_chunk_chksum[0] = multiple_chunk_array[n_data_chunks + 1][(multiple_chunk_data_portion_length % 34) - 2];
-        last_data_chunk_chksum[1] = multiple_chunk_array[n_data_chunks + 1][(multiple_chunk_data_portion_length % 34) - 1];
-        last_data_chunk_chksum[2] = '\0' ;
-        long int last_chunk_checksum_deci = strtol(last_data_chunk_chksum, NULL, 16);
-
-        //!< get the calculated checksum for the last chunk
-        calculated_last_multi_checksum %= 256;
-        if (calculated_last_multi_checksum != last_chunk_checksum_deci)
-        {
-            return INCORRECT_LAST_DATA_PORTION_CHECKSUM;
-        }
+        ///!< Check for data in the last data chunk
     }
 
     return VALID_PACKET;
