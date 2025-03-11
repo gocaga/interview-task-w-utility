@@ -6,7 +6,7 @@ int main()
 {
     uint16_t sizeOfPackets = sizeof(packets) / sizeof(packets[0]);
     uint16_t sizeOfPacket  = 0;
-    packet_validor_ErrorType_e errorType = VALID_PACKET;
+    packet_validator_ErrorType_e errorType = VALID_PACKET;
 
     //!< iterate through the packets array
     for (int i = 0; i < sizeOfPackets; i++)
@@ -55,7 +55,7 @@ int main()
             break;
 
         default:
-            printf("No packet to test. \n");
+            printf("Scenario not handled. \n");
             break;
         }
    }

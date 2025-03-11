@@ -1,13 +1,7 @@
 #include "packet_validator.h"
 
-/**
- * @brief This function validates ASCII encoded protocol packets as per Interview Task D_004574    
- * 
- * @param packet 
- * @param size 
- * @return packet_validor_ErrorType_e 
- */
-packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size)
+
+packet_validator_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size)
 {
     uint16_t calculated_wrapper_checksum = 0;
     packet_validator_AsciiPacket_t asciiPacket;
