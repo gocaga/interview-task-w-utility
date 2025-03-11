@@ -130,12 +130,13 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
             }
 
             calcualtedChecksum_nDataChunk[j][0] = checksum_summation[j][0] % 256;
+            // printf("\ncalculated %d \n", calcualtedChecksum_nDataChunk[j][0]);
 
             chunk_checksums[j][0] = asciiPacket.data[DATA_CHUNK_MAX_LENGTH - 2];
             chunk_checksums[j][1] = asciiPacket.data[DATA_CHUNK_MAX_LENGTH - 1];
             chunk_checksums[j][2] = '\0';
             multi_chunk_checksum_deci[j] = strtol(chunk_checksums[j], NULL, 16);
-
+            // printf("actual %d \n", multi_chunk_checksum_deci[j]);
             if (multi_chunk_checksum_deci[j] != calcualtedChecksum_nDataChunk[j][0])
             {
                 return INCORRECT_DATA_PORTION_CHECKSUM;
@@ -143,6 +144,27 @@ packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t p
         }
 
         ///!< Check for data in the last data chunk
+        uint8_t last_chunk_checksums[3];
+        size_t last_chunk_checksum_deci;
+        uint16_t last_chunk_checksum_summation;
+        uint16_t calcualtedChecksum_lastDataChunk;
+
+        for (int n = (n_data_chunks * DATA_CHUNK_MAX_LENGTH); n < (size - 6); n++)
+        {
+            last_chunk_checksum_summation += asciiPacket.data[n];
+        }
+        calcualtedChecksum_lastDataChunk = last_chunk_checksum_summation % 256;
+       
+        last_chunk_checksums[0] = asciiPacket.data[size - 6];
+        last_chunk_checksums[1] = asciiPacket.data[size - 5];
+        last_chunk_checksums[2] = '\0';
+        last_chunk_checksum_deci = strtol(last_chunk_checksums, NULL, 16);
+
+               
+        if (last_chunk_checksum_deci != calcualtedChecksum_lastDataChunk)
+        {
+            return INCORRECT_LAST_DATA_PORTION_CHECKSUM;
+        }
     }
 
     return VALID_PACKET;

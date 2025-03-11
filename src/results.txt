@@ -2,7 +2,7 @@ size: 4 	packet[0] has an ZERO data in data portion.
 size: 4 	packet[1] has an ZERO data in data portion.
 size: 27 	packet[2] is valid.
 size: 53 	packet[3] is valid.
-size: 119 	packet[4] is valid.
+size: 119 	packet[4] has an invalid checksum for one of the chunks of the data portion.
 size: 29 	packet[5] is valid.
 size: 165 	packet[6] has an invalid checksum for one of the chunks of the data portion.
 size: 283 	packet[7] has an invalid checksum for one of the chunks of the data portion.
@@ -22,11 +22,11 @@ size: 229 	packet[20] has an invalid checksum for one of the chunks of the data 
 size: 67 	packet[21] is valid.
 size: 294 	packet[22] has an invalid checksum for one of the chunks of the data portion.
 size: 93 	packet[23] is valid.
-size: 131 	packet[24] is valid.
+size: 131 	packet[24] has an invalid checksum for one of the chunks of the data portion.
 size: 300 	packet[25] has an invalid checksum for one of the chunks of the data portion.
 size: 178 	packet[26] has an invalid checksum for one of the chunks of the data portion.
 size: 103 	packet[27] is valid.
-size: 122 	packet[28] is valid.
+size: 122 	packet[28] has an invalid checksum for one of the chunks of the data portion.
 size: 155 	packet[29] has an invalid checksum for one of the chunks of the data portion.
 size: 56 	packet[30] is valid.
 size: 157 	packet[31] has an invalid checksum for one of the chunks of the data portion.
@@ -36,8 +36,8 @@ size: 177 	packet[34] has an invalid checksum for one of the chunks of the data 
 size: 280 	packet[35] has an invalid checksum for one of the chunks of the data portion.
 size: 164 	packet[36] has an invalid checksum for one of the chunks of the data portion.
 size: 179 	packet[37] has an invalid checksum for one of the chunks of the data portion.
-size: 116 	packet[38] is valid.
-size: 116 	packet[39] is valid.
+size: 116 	packet[38] has an invalid checksum for one of the chunks of the data portion.
+size: 116 	packet[39] has an invalid checksum for one of the chunks of the data portion.
 size: 12 	packet[40] is valid.
 size: 304 	packet[41] has an invalid checksum for one of the chunks of the data portion.
 size: 211 	packet[42] has an invalid checksum for one of the chunks of the data portion.
@@ -49,7 +49,7 @@ size: 16 	packet[47] is valid.
 size: 143 	packet[48] has an invalid checksum for one of the chunks of the data portion.
 size: 144 	packet[49] has an invalid checksum for one of the chunks of the data portion.
 size: 268 	packet[50] has an invalid checksum for one of the chunks of the data portion.
-size: 124 	packet[51] is valid.
+size: 124 	packet[51] has an invalid checksum for one of the chunks of the data portion.
 size: 160 	packet[52] has an invalid checksum for one of the chunks of the data portion.
 size: 177 	packet[53] has an invalid checksum for one of the chunks of the data portion.
 size: 9 	packet[54] is valid.
@@ -57,14 +57,14 @@ size: 23 	packet[55] is valid.
 size: 92 	packet[56] is valid.
 size: 96 	packet[57] is valid.
 size: 59 	packet[58] is valid.
-size: 133 	packet[59] is valid.
+size: 133 	packet[59] has an invalid checksum for one of the chunks of the data portion.
 size: 237 	packet[60] has an invalid checksum for one of the chunks of the data portion.
 size: 235 	packet[61] has an invalid checksum for one of the chunks of the data portion.
-size: 117 	packet[62] is valid.
+size: 117 	packet[62] has an invalid checksum for one of the chunks of the data portion.
 size: 199 	packet[63] has an invalid checksum for one of the chunks of the data portion.
 size: 181 	packet[64] has an invalid checksum for one of the chunks of the data portion.
 size: 153 	packet[65] has an invalid checksum for one of the chunks of the data portion.
-size: 134 	packet[66] is valid.
+size: 134 	packet[66] has an invalid checksum for one of the chunks of the data portion.
 size: 24 	packet[67] is valid.
 size: 4 	packet[68] has an ZERO data in data portion.
 size: 153 	packet[69] has an invalid checksum for one of the chunks of the data portion.
@@ -87,7 +87,7 @@ size: 213 	packet[85] has an invalid checksum for one of the chunks of the data 
 size: 189 	packet[86] has an invalid checksum for one of the chunks of the data portion.
 size: 76 	packet[87] is valid.
 size: 303 	packet[88] has an invalid checksum for one of the chunks of the data portion.
-size: 125 	packet[89] is valid.
+size: 125 	packet[89] has an invalid checksum for one of the chunks of the data portion.
 size: 268 	packet[90] has an invalid checksum for one of the chunks of the data portion.
 size: 199 	packet[91] has an invalid checksum for one of the chunks of the data portion.
 size: 221 	packet[92] has an invalid checksum for one of the chunks of the data portion.
@@ -100,7 +100,7 @@ size: 177 	packet[98] has an invalid checksum for one of the chunks of the data 
 size: 161 	packet[99] has an invalid checksum for one of the chunks of the data portion.
 size: 160 	packet[100] has an invalid checksum for one of the chunks of the data portion.
 size: 37 	packet[101] is valid.
-size: 118 	packet[102] is valid.
+size: 118 	packet[102] has an invalid checksum for one of the chunks of the data portion.
 size: 205 	packet[103] has an invalid checksum for one of the chunks of the data portion.
 size: 180 	packet[104] has an invalid checksum for one of the chunks of the data portion.
 size: 41 	packet[105] is valid.
@@ -109,10 +109,10 @@ size: 196 	packet[107] has an invalid checksum for one of the chunks of the data
 size: 216 	packet[108] has an invalid checksum for one of the chunks of the data portion.
 size: 160 	packet[109] has an invalid checksum for one of the chunks of the data portion.
 size: 227 	packet[110] has an invalid checksum for one of the chunks of the data portion.
-size: 106 	packet[111] is valid.
+size: 106 	packet[111] has an invalid checksum for one of the chunks of the data portion.
 size: 260 	packet[112] has an invalid checksum for one of the chunks of the data portion.
 size: 48 	packet[113] is valid.
-size: 106 	packet[114] is valid.
+size: 106 	packet[114] has an invalid checksum for one of the chunks of the data portion.
 size: 93 	packet[115] is valid.
 size: 314 	packet[116] has an invalid checksum for one of the chunks of the data portion.
 size: 77 	packet[117] is valid.
@@ -141,24 +141,24 @@ size: 264 	packet[139] has an invalid checksum for one of the chunks of the data
 size: 246 	packet[140] has an invalid checksum for one of the chunks of the data portion.
 size: 182 	packet[141] has an invalid checksum for one of the chunks of the data portion.
 size: 58 	packet[142] is valid.
-size: 116 	packet[143] is valid.
+size: 116 	packet[143] has an invalid checksum for one of the chunks of the data portion.
 size: 88 	packet[144] is valid.
 size: 252 	packet[145] has an invalid checksum for one of the chunks of the data portion.
 size: 183 	packet[146] has an invalid checksum for one of the chunks of the data portion.
 size: 188 	packet[147] has an invalid checksum for one of the chunks of the data portion.
-size: 106 	packet[148] is valid.
+size: 106 	packet[148] has an invalid checksum for one of the chunks of the data portion.
 size: 292 	packet[149] has an invalid checksum for one of the chunks of the data portion.
 size: 174 	packet[150] has an invalid checksum for one of the chunks of the data portion.
 size: 248 	packet[151] has an invalid checksum for one of the chunks of the data portion.
 size: 154 	packet[152] has an invalid checksum for one of the chunks of the data portion.
 size: 230 	packet[153] has an invalid checksum for one of the chunks of the data portion.
-size: 131 	packet[154] is valid.
+size: 131 	packet[154] has an invalid checksum for one of the chunks of the data portion.
 size: 289 	packet[155] has an invalid checksum for one of the chunks of the data portion.
 size: 151 	packet[156] has an invalid checksum for one of the chunks of the data portion.
-size: 72 	packet[157] is valid.
+size: 72 	packet[157] has an invalid checksum for the last data portion.
 size: 89 	packet[158] is valid.
 size: 30 	packet[159] is valid.
-size: 119 	packet[160] is valid.
+size: 119 	packet[160] has an invalid checksum for one of the chunks of the data portion.
 size: 305 	packet[161] has an invalid checksum for one of the chunks of the data portion.
 size: 102 	packet[162] is valid.
 size: 92 	packet[163] is valid.
@@ -172,18 +172,18 @@ size: 86 	packet[170] is valid.
 size: 57 	packet[171] is valid.
 size: 77 	packet[172] is valid.
 size: 79 	packet[173] is valid.
-size: 112 	packet[174] is valid.
-size: 123 	packet[175] is valid.
+size: 112 	packet[174] has an invalid checksum for one of the chunks of the data portion.
+size: 123 	packet[175] has an invalid checksum for one of the chunks of the data portion.
 size: 44 	packet[176] is valid.
 size: 145 	packet[177] has an invalid checksum for one of the chunks of the data portion.
 size: 233 	packet[178] has an invalid checksum for one of the chunks of the data portion.
-size: 109 	packet[179] is valid.
+size: 109 	packet[179] has an invalid checksum for one of the chunks of the data portion.
 size: 205 	packet[180] has an invalid checksum for one of the chunks of the data portion.
 size: 4 	packet[181] has an ZERO data in data portion.
 size: 296 	packet[182] has an invalid checksum for one of the chunks of the data portion.
 size: 262 	packet[183] has an invalid checksum for one of the chunks of the data portion.
-size: 128 	packet[184] is valid.
-size: 116 	packet[185] is valid.
+size: 128 	packet[184] has an invalid checksum for one of the chunks of the data portion.
+size: 116 	packet[185] has an invalid checksum for one of the chunks of the data portion.
 size: 279 	packet[186] has an invalid checksum for one of the chunks of the data portion.
 size: 64 	packet[187] is valid.
 size: 241 	packet[188] has an invalid checksum for one of the chunks of the data portion.
@@ -192,10 +192,10 @@ size: 35 	packet[190] is valid.
 size: 156 	packet[191] has an invalid checksum for one of the chunks of the data portion.
 size: 170 	packet[192] has an invalid checksum for one of the chunks of the data portion.
 size: 100 	packet[193] is valid.
-size: 109 	packet[194] is valid.
+size: 109 	packet[194] has an invalid checksum for one of the chunks of the data portion.
 size: 102 	packet[195] is valid.
 size: 27 	packet[196] is valid.
-size: 130 	packet[197] is valid.
+size: 130 	packet[197] has an invalid checksum for one of the chunks of the data portion.
 size: 221 	packet[198] has an invalid checksum for one of the chunks of the data portion.
 size: 180 	packet[199] has an invalid checksum for one of the chunks of the data portion.
 size: 180 	packet[200] has an invalid checksum for one of the chunks of the data portion.
@@ -204,8 +204,8 @@ size: 98 	packet[202] is valid.
 size: 288 	packet[203] has an invalid checksum for one of the chunks of the data portion.
 size: 22 	packet[204] is valid.
 size: 247 	packet[205] has an invalid checksum for one of the chunks of the data portion.
-size: 113 	packet[206] is valid.
-size: 111 	packet[207] is valid.
+size: 113 	packet[206] has an invalid checksum for one of the chunks of the data portion.
+size: 111 	packet[207] has an invalid checksum for one of the chunks of the data portion.
 size: 260 	packet[208] has an invalid checksum for one of the chunks of the data portion.
 size: 297 	packet[209] has an invalid checksum for one of the chunks of the data portion.
 size: 78 	packet[210] is valid.
@@ -219,7 +219,7 @@ size: 240 	packet[217] has an invalid checksum for one of the chunks of the data
 size: 197 	packet[218] has an invalid checksum for one of the chunks of the data portion.
 size: 306 	packet[219] has an invalid checksum for one of the chunks of the data portion.
 size: 26 	packet[220] is valid.
-size: 131 	packet[221] is valid.
+size: 131 	packet[221] has an invalid checksum for one of the chunks of the data portion.
 size: 180 	packet[222] has an invalid checksum for one of the chunks of the data portion.
 size: 313 	packet[223] has an invalid checksum for one of the chunks of the data portion.
 size: 139 	packet[224] has an invalid checksum for one of the chunks of the data portion.
@@ -231,17 +231,17 @@ size: 260 	packet[229] has an invalid checksum for one of the chunks of the data
 size: 20 	packet[230] is valid.
 size: 13 	packet[231] is valid.
 size: 35 	packet[232] is valid.
-size: 106 	packet[233] is valid.
+size: 106 	packet[233] has an invalid checksum for one of the chunks of the data portion.
 size: 300 	packet[234] has an invalid checksum for one of the chunks of the data portion.
 size: 201 	packet[235] has an invalid checksum for one of the chunks of the data portion.
 size: 223 	packet[236] has an invalid checksum for one of the chunks of the data portion.
-size: 134 	packet[237] is valid.
+size: 134 	packet[237] has an invalid checksum for one of the chunks of the data portion.
 size: 9 	packet[238] is valid.
 size: 170 	packet[239] has an invalid checksum for one of the chunks of the data portion.
 size: 318 	packet[240] has an invalid checksum for one of the chunks of the data portion.
 size: 195 	packet[241] has an invalid checksum for one of the chunks of the data portion.
 size: 14 	packet[242] is valid.
-size: 131 	packet[243] is valid.
+size: 131 	packet[243] has an invalid checksum for one of the chunks of the data portion.
 size: 103 	packet[244] is valid.
 size: 299 	packet[245] has an invalid checksum for one of the chunks of the data portion.
 size: 95 	packet[246] is valid.
@@ -256,41 +256,41 @@ size: 84 	packet[254] is valid.
 size: 31 	packet[255] is valid.
 size: 206 	packet[256] has an invalid checksum for one of the chunks of the data portion.
 size: 211 	packet[257] has an invalid checksum for one of the chunks of the data portion.
-size: 132 	packet[258] is valid.
+size: 132 	packet[258] has an invalid checksum for one of the chunks of the data portion.
 size: 289 	packet[259] has an invalid checksum for one of the chunks of the data portion.
 size: 179 	packet[260] has an invalid checksum for one of the chunks of the data portion.
 size: 140 	packet[261] has an invalid checksum for one of the chunks of the data portion.
 size: 98 	packet[262] is valid.
 size: 198 	packet[263] has an invalid checksum for one of the chunks of the data portion.
 size: 172 	packet[264] has an invalid checksum for one of the chunks of the data portion.
-size: 129 	packet[265] is valid.
+size: 129 	packet[265] has an invalid checksum for one of the chunks of the data portion.
 size: 8 	packet[266] is valid.
-size: 124 	packet[267] is valid.
+size: 124 	packet[267] has an invalid checksum for one of the chunks of the data portion.
 size: 237 	packet[268] has an invalid checksum for one of the chunks of the data portion.
 size: 94 	packet[269] is valid.
 size: 145 	packet[270] has an invalid checksum for one of the chunks of the data portion.
-size: 116 	packet[271] is valid.
+size: 116 	packet[271] has an invalid checksum for one of the chunks of the data portion.
 size: 257 	packet[272] has an invalid checksum for one of the chunks of the data portion.
 size: 262 	packet[273] has an invalid checksum for one of the chunks of the data portion.
 size: 296 	packet[274] has an invalid checksum for one of the chunks of the data portion.
 size: 53 	packet[275] is valid.
-size: 132 	packet[276] is valid.
+size: 132 	packet[276] has an invalid checksum for one of the chunks of the data portion.
 size: 76 	packet[277] is valid.
 size: 264 	packet[278] has an invalid checksum for one of the chunks of the data portion.
-size: 104 	packet[279] is valid.
+size: 104 	packet[279] has an invalid checksum for one of the chunks of the data portion.
 size: 38 	packet[280] is valid.
 size: 211 	packet[281] has an invalid checksum for one of the chunks of the data portion.
 size: 85 	packet[282] is valid.
 size: 51 	packet[283] is valid.
-size: 106 	packet[284] is valid.
+size: 106 	packet[284] has an invalid checksum for one of the chunks of the data portion.
 size: 222 	packet[285] has an invalid checksum for one of the chunks of the data portion.
 size: 252 	packet[286] has an invalid checksum for one of the chunks of the data portion.
 size: 95 	packet[287] is valid.
 size: 54 	packet[288] is valid.
 size: 146 	packet[289] has an invalid checksum for one of the chunks of the data portion.
-size: 118 	packet[290] is valid.
+size: 118 	packet[290] has an invalid checksum for one of the chunks of the data portion.
 size: 235 	packet[291] has an invalid checksum for one of the chunks of the data portion.
-size: 121 	packet[292] is valid.
+size: 121 	packet[292] has an invalid checksum for one of the chunks of the data portion.
 size: 283 	packet[293] has an invalid checksum for one of the chunks of the data portion.
 size: 84 	packet[294] is valid.
 size: 256 	packet[295] has an invalid checksum for one of the chunks of the data portion.
@@ -300,9 +300,9 @@ size: 322 	packet[298] has an invalid checksum for one of the chunks of the data
 size: 10 	packet[299] is valid.
 size: 320 	packet[300] has an invalid checksum for one of the chunks of the data portion.
 size: 31 	packet[301] is valid.
-size: 70 	packet[302] is valid.
+size: 70 	packet[302] has an invalid checksum for the last data portion.
 size: 189 	packet[303] has an invalid checksum for one of the chunks of the data portion.
-size: 112 	packet[304] is valid.
+size: 112 	packet[304] has an invalid checksum for one of the chunks of the data portion.
 size: 34 	packet[305] is valid.
 size: 29 	packet[306] is valid.
 size: 308 	packet[307] has an invalid checksum for one of the chunks of the data portion.
@@ -314,23 +314,23 @@ size: 173 	packet[312] has an invalid checksum for one of the chunks of the data
 size: 152 	packet[313] has an invalid checksum for one of the chunks of the data portion.
 size: 183 	packet[314] has an invalid checksum for one of the chunks of the data portion.
 size: 52 	packet[315] is valid.
-size: 70 	packet[316] is valid.
+size: 70 	packet[316] has an invalid checksum for the last data portion.
 size: 293 	packet[317] has an invalid checksum for one of the chunks of the data portion.
 size: 96 	packet[318] is valid.
 size: 194 	packet[319] has an invalid checksum for one of the chunks of the data portion.
 size: 287 	packet[320] has an invalid checksum for one of the chunks of the data portion.
-size: 110 	packet[321] is valid.
+size: 110 	packet[321] has an invalid checksum for one of the chunks of the data portion.
 size: 250 	packet[322] has an invalid checksum for one of the chunks of the data portion.
 size: 199 	packet[323] has an invalid checksum for one of the chunks of the data portion.
 size: 148 	packet[324] has an invalid checksum for one of the chunks of the data portion.
 size: 29 	packet[325] is valid.
 size: 232 	packet[326] has an invalid checksum for one of the chunks of the data portion.
-size: 71 	packet[327] is valid.
+size: 71 	packet[327] has an invalid checksum for the last data portion.
 size: 153 	packet[328] has an invalid checksum for one of the chunks of the data portion.
 size: 303 	packet[329] has an invalid checksum for one of the chunks of the data portion.
 size: 57 	packet[330] is valid.
 size: 235 	packet[331] has an invalid checksum for one of the chunks of the data portion.
-size: 72 	packet[332] is valid.
+size: 72 	packet[332] has an invalid checksum for the last data portion.
 size: 260 	packet[333] has an invalid checksum for one of the chunks of the data portion.
 size: 232 	packet[334] has an invalid checksum for one of the chunks of the data portion.
 size: 100 	packet[335] is valid.
@@ -338,12 +338,12 @@ size: 270 	packet[336] has an invalid checksum for one of the chunks of the data
 size: 237 	packet[337] has an invalid checksum for one of the chunks of the data portion.
 size: 188 	packet[338] has an invalid checksum for one of the chunks of the data portion.
 size: 77 	packet[339] is valid.
-size: 109 	packet[340] is valid.
+size: 109 	packet[340] has an invalid checksum for one of the chunks of the data portion.
 size: 258 	packet[341] has an invalid checksum for one of the chunks of the data portion.
 size: 52 	packet[342] is valid.
 size: 102 	packet[343] is valid.
 size: 16 	packet[344] is valid.
-size: 127 	packet[345] is valid.
+size: 127 	packet[345] has an invalid checksum for one of the chunks of the data portion.
 size: 194 	packet[346] has an invalid checksum for one of the chunks of the data portion.
 size: 15 	packet[347] is valid.
 size: 152 	packet[348] has an invalid checksum for one of the chunks of the data portion.
@@ -351,7 +351,7 @@ size: 204 	packet[349] has an invalid checksum for one of the chunks of the data
 size: 37 	packet[350] is valid.
 size: 233 	packet[351] has an invalid checksum for one of the chunks of the data portion.
 size: 306 	packet[352] has an invalid checksum for one of the chunks of the data portion.
-size: 134 	packet[353] is valid.
+size: 134 	packet[353] has an invalid checksum for one of the chunks of the data portion.
 size: 231 	packet[354] has an invalid checksum for one of the chunks of the data portion.
 size: 294 	packet[355] has an invalid checksum for one of the chunks of the data portion.
 size: 288 	packet[356] has an invalid checksum for one of the chunks of the data portion.
@@ -368,18 +368,18 @@ size: 222 	packet[366] has an invalid checksum for one of the chunks of the data
 size: 78 	packet[367] is valid.
 size: 54 	packet[368] is valid.
 size: 286 	packet[369] has an invalid checksum for one of the chunks of the data portion.
-size: 117 	packet[370] is valid.
+size: 117 	packet[370] has an invalid checksum for one of the chunks of the data portion.
 size: 216 	packet[371] has an invalid checksum for one of the chunks of the data portion.
 size: 89 	packet[372] is valid.
 size: 83 	packet[373] is valid.
-size: 131 	packet[374] is valid.
+size: 131 	packet[374] has an invalid checksum for one of the chunks of the data portion.
 size: 17 	packet[375] is valid.
 size: 17 	packet[376] is valid.
 size: 307 	packet[377] has an invalid checksum for one of the chunks of the data portion.
 size: 78 	packet[378] is valid.
-size: 134 	packet[379] is valid.
+size: 134 	packet[379] has an invalid checksum for one of the chunks of the data portion.
 size: 26 	packet[380] is valid.
-size: 72 	packet[381] is valid.
+size: 72 	packet[381] has an invalid checksum for the last data portion.
 size: 97 	packet[382] is valid.
 size: 163 	packet[383] has an invalid checksum for one of the chunks of the data portion.
 size: 167 	packet[384] has an invalid checksum for one of the chunks of the data portion.
@@ -387,9 +387,9 @@ size: 46 	packet[385] is valid.
 size: 189 	packet[386] has an invalid checksum for one of the chunks of the data portion.
 size: 153 	packet[387] has an invalid checksum for one of the chunks of the data portion.
 size: 310 	packet[388] has an invalid checksum for one of the chunks of the data portion.
-size: 137 	packet[389] is valid.
+size: 137 	packet[389] has an invalid checksum for one of the chunks of the data portion.
 size: 146 	packet[390] has an invalid checksum for one of the chunks of the data portion.
-size: 127 	packet[391] is valid.
+size: 127 	packet[391] has an invalid checksum for one of the chunks of the data portion.
 size: 79 	packet[392] is valid.
 size: 167 	packet[393] has an invalid checksum for one of the chunks of the data portion.
 size: 67 	packet[394] is valid.
@@ -413,7 +413,7 @@ size: 34 	packet[411] is valid.
 size: 181 	packet[412] has an invalid checksum for one of the chunks of the data portion.
 size: 16 	packet[413] is valid.
 size: 199 	packet[414] has an invalid checksum for one of the chunks of the data portion.
-size: 109 	packet[415] is valid.
+size: 109 	packet[415] has an invalid checksum for one of the chunks of the data portion.
 size: 286 	packet[416] has an invalid checksum for one of the chunks of the data portion.
 size: 257 	packet[417] has an invalid checksum for one of the chunks of the data portion.
 size: 140 	packet[418] has an invalid checksum for one of the chunks of the data portion.
@@ -440,15 +440,15 @@ size: 62 	packet[438] is valid.
 size: 282 	packet[439] has an invalid checksum for one of the chunks of the data portion.
 size: 258 	packet[440] has an invalid checksum for one of the chunks of the data portion.
 size: 242 	packet[441] has an invalid checksum for one of the chunks of the data portion.
-size: 114 	packet[442] is valid.
+size: 114 	packet[442] has an invalid checksum for one of the chunks of the data portion.
 size: 95 	packet[443] is valid.
 size: 155 	packet[444] has an invalid checksum for one of the chunks of the data portion.
-size: 135 	packet[445] is valid.
+size: 135 	packet[445] has an invalid checksum for one of the chunks of the data portion.
 size: 298 	packet[446] has an invalid checksum for one of the chunks of the data portion.
 size: 166 	packet[447] has an invalid checksum for one of the chunks of the data portion.
 size: 194 	packet[448] has an invalid checksum for one of the chunks of the data portion.
 size: 15 	packet[449] is valid.
-size: 70 	packet[450] is valid.
+size: 70 	packet[450] has an invalid checksum for the last data portion.
 size: 54 	packet[451] is valid.
 size: 18 	packet[452] is valid.
 size: 26 	packet[453] is valid.
@@ -463,7 +463,7 @@ size: 48 	packet[461] is valid.
 size: 96 	packet[462] is valid.
 size: 44 	packet[463] is valid.
 size: 76 	packet[464] is valid.
-size: 118 	packet[465] is valid.
+size: 118 	packet[465] has an invalid checksum for one of the chunks of the data portion.
 size: 158 	packet[466] has an invalid checksum for one of the chunks of the data portion.
 size: 217 	packet[467] has an invalid checksum for one of the chunks of the data portion.
 size: 231 	packet[468] has an invalid checksum for one of the chunks of the data portion.
@@ -472,17 +472,17 @@ size: 41 	packet[470] is valid.
 size: 95 	packet[471] is valid.
 size: 241 	packet[472] has an invalid checksum for one of the chunks of the data portion.
 size: 167 	packet[473] has an invalid checksum for one of the chunks of the data portion.
-size: 109 	packet[474] is valid.
+size: 109 	packet[474] has an invalid checksum for one of the chunks of the data portion.
 size: 24 	packet[475] is valid.
 size: 285 	packet[476] has an invalid checksum for one of the chunks of the data portion.
 size: 283 	packet[477] has an invalid checksum for one of the chunks of the data portion.
-size: 132 	packet[478] is valid.
-size: 133 	packet[479] is valid.
+size: 132 	packet[478] has an invalid checksum for one of the chunks of the data portion.
+size: 133 	packet[479] has an invalid checksum for one of the chunks of the data portion.
 size: 75 	packet[480] is valid.
 size: 270 	packet[481] has an invalid checksum for one of the chunks of the data portion.
 size: 217 	packet[482] has an invalid checksum for one of the chunks of the data portion.
-size: 71 	packet[483] is valid.
-size: 131 	packet[484] is valid.
+size: 71 	packet[483] has an invalid checksum for the last data portion.
+size: 131 	packet[484] has an invalid checksum for one of the chunks of the data portion.
 size: 317 	packet[485] has an invalid checksum for one of the chunks of the data portion.
 size: 200 	packet[486] has an invalid checksum for one of the chunks of the data portion.
 size: 234 	packet[487] has an invalid checksum for one of the chunks of the data portion.
@@ -494,11 +494,11 @@ size: 18 	packet[492] is valid.
 size: 316 	packet[493] has an invalid checksum for one of the chunks of the data portion.
 size: 271 	packet[494] has an invalid checksum for one of the chunks of the data portion.
 size: 274 	packet[495] has an invalid checksum for one of the chunks of the data portion.
-size: 134 	packet[496] is valid.
+size: 134 	packet[496] has an invalid checksum for one of the chunks of the data portion.
 size: 17 	packet[497] is valid.
 size: 299 	packet[498] has an invalid checksum for one of the chunks of the data portion.
-size: 134 	packet[499] is valid.
-size: 112 	packet[500] is valid.
+size: 134 	packet[499] has an invalid checksum for one of the chunks of the data portion.
+size: 112 	packet[500] has an invalid checksum for one of the chunks of the data portion.
 size: 239 	packet[501] has an invalid checksum for one of the chunks of the data portion.
 size: 264 	packet[502] has an invalid checksum for one of the chunks of the data portion.
 size: 270 	packet[503] has an invalid checksum for one of the chunks of the data portion.
@@ -521,7 +521,7 @@ size: 215 	packet[519] has an invalid checksum for one of the chunks of the data
 size: 237 	packet[520] has an invalid checksum for one of the chunks of the data portion.
 size: 143 	packet[521] has an invalid checksum for one of the chunks of the data portion.
 size: 96 	packet[522] is valid.
-size: 119 	packet[523] is valid.
+size: 119 	packet[523] has an invalid checksum for one of the chunks of the data portion.
 size: 24 	packet[524] is valid.
 size: 174 	packet[525] has an invalid checksum for one of the chunks of the data portion.
 size: 296 	packet[526] has an invalid checksum for one of the chunks of the data portion.
