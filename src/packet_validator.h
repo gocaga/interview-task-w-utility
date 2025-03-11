@@ -20,7 +20,7 @@ typedef enum
     INCORRECT_LAST_DATA_PORTION_CHECKSUM,
     ZERO_DATA,
     PACKET_LARGER_THAN_16_CHUNKS
-} packet_validor_ErrorType_e;
+} packet_validator_ErrorType_e;
 
 typedef struct
 {
@@ -31,6 +31,13 @@ typedef struct
 
 }packet_validator_AsciiPacket_t;
 
-packet_validor_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size);
+/**
+ * @brief This function validates ASCII encoded protocol packets as per Interview Task D_004574    
+ * 
+ * @param packet 
+ * @param size 
+ * @return packet_validator_ErrorType_e 
+ */
+packet_validator_ErrorType_e packet_validator_validateAsciiEncodedPacket(uint8_t packet[], uint16_t size);
 
 #endif // PACKET_VALIDATOR__H
